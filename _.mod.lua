@@ -414,8 +414,8 @@ local settings = {};
 function settings.new(fontModule, attached, child)
 	local self = setmetatable({}, {__index = settings});
 	
-	settings.child = child;
-	settings.attached = attached;
+	self.child = child;
+	self.attached = attached;
 	
 	-- place data in new format for easy access
 	self.information = fontModule.font.information;
